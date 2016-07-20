@@ -23,6 +23,11 @@ Class WatermarkFacade
         self::$watermark = new Watermark('\\EasyWatermark\\Drivers\\' . self::$driver, $baseimg);
     }
 
+    public static function setFontStyle($style_name, $style_file_name)
+    {
+        self::$watermark->setFontStyle($style_name, $style_file_name);
+    }
+
     public static function text($text, $dx = 0, $dy = 0, $fontsize = 12)
     {
         self::$watermark->text($text, $dx, $dy, $fontsize);

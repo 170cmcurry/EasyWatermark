@@ -9,6 +9,7 @@ class Qiniu implements Driver
     protected $baseimg;
     protected $imgurl;
     protected $insert;
+    private $fontstyle = null;
 
     public function __construct($baseimg)
     {
@@ -17,6 +18,10 @@ class Qiniu implements Driver
         $this->insert  = null;
     }
 
+    public function setFontStyle($stylename, $stylefilename)
+    {
+        $this->fontstyle = $stylename;
+    }
 
     public function text($text, $dx, $dy, $fontsize)
     {
@@ -26,6 +31,9 @@ class Qiniu implements Driver
             '/dx/' . $dx .
             '/dy/' . $dy .
             '/gravity/NorthWest';
+        if ($this->fontstyle) {
+            $text .= '/font/' . \Qiniu\base64_urlSafeEncode($this->fontstyle);
+        }
         $this->insert .= $text;
     }
 

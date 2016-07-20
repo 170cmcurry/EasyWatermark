@@ -13,3 +13,6 @@ example.php
 
 # Operating system files
 .DS_Store
+
+#Font
+/font
