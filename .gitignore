@@ -1,0 +1,15 @@
+# PHP packages
+/vendor
+composer.phar
+composer.lock
+
+# Test coverage output
+/test-coverage/
+example.php
+
+#IDE
+/nbproject
+/.idea
+
+# Operating system files
+.DS_Store
