@@ -1,10 +1,16 @@
 {
+  "name": "170cmcurry/EasyWatermark",
+  "description": "Makes it easy to add a watermark. ",
+  "authors": [
+    {
+      "name": "170cmcurry",
+      "email": "170cmcurry@outlook.com"
+    }
+  ],
+  "license": "MIT",
   "require": {
     "intervention/image": "^2.3",
     "qiniu/php-sdk": "7.0.7"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "5.4.*"
   },
   "autoload": {
     "psr-4": {
